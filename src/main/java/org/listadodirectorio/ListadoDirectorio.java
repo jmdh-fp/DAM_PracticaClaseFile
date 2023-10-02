@@ -24,10 +24,8 @@ public class ListadoDirectorio {
                 File[] ficheros = fich.listFiles(); // Ojo, ficheros o directorios
                 for (File f : ficheros) {
                     String textoDescr = f.isDirectory() ? "[/]" : f.isFile() ? "[_]" : "?";
-                    String fechaModif = (new Date(f.lastModified()).toString());
-                    //fechaModif = dameFecha(f);
-
-                    System.out.printf("%-5s %-40s %14d  %-9s  %s\n", textoDescr, f.getName(), f.length(), damePermisos(f), dameFecha(f));
+                    //String fechaModif = (new Date(f.lastModified()).toString());
+                   System.out.printf("%-5s %-40s %14d  %-9s  %s\n", textoDescr, f.getName(), f.length(), damePermisos(f), dameFecha(f));
                 }
             }
         }
